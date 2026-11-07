@@ -1,0 +1,172 @@
+{
+  "chats": [
+    {
+      "id": "33049e5b-e331-46e7-93f6-6373c652f981",
+      "user_id": null,
+      "title": "Simple HTML Code Example",
+      "model": "aura-3.8-flash",
+      "pinned": false,
+      "created_at": "2026-11-06T07:21:04.809Z",
+      "updated_at": "2026-11-07T07:22:31.562Z"
+    },
+    {
+      "id": "9bb06658-9e0d-4f67-923e-f4c383129952",
+      "user_id": null,
+      "title": "Greeting and Opening",
+      "model": "aura-3.8-flash",
+      "pinned": false,
+      "created_at": "2026-11-06T07:12:17.182Z",
+      "updated_at": "2026-11-06T07:12:39.167Z"
+    },
+    {
+      "id": "39fe05b8-2e92-4235-a2a6-41f9b3a81c6e",
+      "user_id": null,
+      "title": "System Online Status Confirmation",
+      "model": "aura-3.8-flash",
+      "pinned": false,
+      "created_at": "2026-11-06T07:10:27.387Z",
+      "updated_at": "2026-11-06T07:20:09.206Z"
+    },
+    {
+      "id": "b55e4a13-0972-496d-ad8b-799db891af22",
+      "user_id": null,
+      "title": "New Conversation",
+      "model": "aura-3.8-flash",
+      "pinned": false,
+      "created_at": "2026-11-06T07:05:48.447Z",
+      "updated_at": "2026-11-06T07:05:48.449Z"
+    },
+    {
+      "id": "60e3098f-fb07-456f-ab94-0d8ad459bc93",
+      "user_id": null,
+      "title": "New Conversation",
+      "model": "gemini-3.8-flash",
+      "pinned": false,
+      "created_at": "2026-11-05T18:26:30.323Z",
+      "updated_at": "2026-11-05T18:26:32.282Z"
+    },
+    {
+      "id": "9d5bf4db-1e4a-42c7-9462-a7080ed86611",
+      "user_id": null,
+      "title": "New Conversation",
+      "model": "gemini-3.8-flash",
+      "pinned": false,
+      "created_at": "2026-11-05T18:23:36.141Z",
+      "updated_at": "2026-11-05T18:26:17.731Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "8e965986-14d1-4993-895e-2705a80594b3",
+      "chat_id": "9d5bf4db-1e4a-42c7-9462-a7080ed86611",
+      "role": "user",
+      "content": "Hello test",
+      "metadata": {},
+      "created_at": "2026-11-05T18:23:36.144Z"
+    },
+    {
+      "id": "203f1a60-5b17-4339-857e-667b2055e9e4",
+      "chat_id": "9d5bf4db-1e4a-42c7-9462-a7080ed86611",
+      "role": "user",
+      "content": "hello",
+      "metadata": {},
+      "created_at": "2026-11-05T18:26:17.731Z"
+    },
+    {
+      "id": "b0694083-3b04-446b-98d3-8f5891d2e627",
+      "chat_id": "60e3098f-fb07-456f-ab94-0d8ad459bc93",
+      "role": "user",
+      "content": "Design an event-driven architecture using Kafka, Redis, and PostgreSQL for handling 50,000 orders/sec with idempotent guarantees.",
+      "metadata": {},
+      "created_at": "2026-11-05T18:26:32.282Z"
+    },
+    {
+      "id": "3078b16d-6aea-4aa3-a39d-0e3a59ca0ca0",
+      "chat_id": "b55e4a13-0972-496d-ad8b-799db891af22",
+      "role": "user",
+      "content": "Give a 1-sentence greeting for the AURA platform.",
+      "metadata": {},
+      "created_at": "2026-11-06T07:05:48.449Z"
+    },
+    {
+      "id": "3247e077-b71a-4be6-9690-c0fe00463f21",
+      "chat_id": "39fe05b8-2e92-4235-a2a6-41f9b3a81c6e",
+      "role": "user",
+      "content": "Hello AURA! Confirm you are online in 5 words.",
+      "metadata": {},
+      "created_at": "2026-11-06T07:10:27.389Z"
+    },
+    {
+      "id": "119e6bd5-6cb2-45df-8f42-07b4634b2274",
+      "chat_id": "9bb06658-9e0d-4f67-923e-f4c383129952",
+      "role": "user",
+      "content": "Hello",
+      "metadata": {},
+      "created_at": "2026-11-06T07:12:17.184Z"
+    },
+    {
+      "id": "fcd929bb-700c-40d9-a8ae-d21836fd04dd",
+      "chat_id": "9bb06658-9e0d-4f67-923e-f4c383129952",
+      "role": "model",
+      "content": "Greetings. I am AURA. \n\nI am ready to assist with system architecture, production-grade software engineering, algorithms, or complex problem-solving. \n\nWhat are we building or optimizing today?",
+      "metadata": {},
+      "created_at": "2026-11-06T07:12:38.016Z"
+    },
+    {
+      "id": "1380710b-ce62-41c5-a526-b1a5b38198ed",
+      "chat_id": "39fe05b8-2e92-4235-a2a6-41f9b3a81c6e",
+      "role": "model",
+      "content": "Systems online. AURA is ready.",
+      "metadata": {},
+      "created_at": "2026-11-06T07:12:56.674Z"
+    },
+    {
+      "id": "b06bde72-0f55-450f-bd03-b59f1fec1005",
+      "chat_id": "39fe05b8-2e92-4235-a2a6-41f9b3a81c6e",
+      "role": "user",
+      "content": "Hello",
+      "metadata": {},
+      "created_at": "2026-11-06T07:14:22.741Z"
+    },
+    {
+      "id": "5a2bd241-c377-41c3-bd43-401edbc1aa13",
+      "chat_id": "39fe05b8-2e92-4235-a2a6-41f9b3a81c6e",
+      "role": "user",
+      "content": "Can you give me simple code of html.",
+      "metadata": {},
+      "created_at": "2026-11-06T07:15:55.433Z"
+    },
+    {
+      "id": "b74ab1c5-8135-47a7-acc4-742eeb8de41b",
+      "chat_id": "39fe05b8-2e92-4235-a2a6-41f9b3a81c6e",
+      "role": "model",
+      "content": "Here is a simple, clean, and modern HTML5 template:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Simple Page</title>\n    <style>\n        body {\n            font-family: system-ui, -apple-system, sans-serif;\n            text-align: center;\n            margin-top: 20vh;\n            color: #333;\n        }\n    </style>\n</head>\n<body>\n\n    <h1>Hello, World!</h1>\n    <p>This is a basic HTML document.</p>\n\n</body>\n</html>\n```",
+      "metadata": {},
+      "created_at": "2026-11-06T07:19:46.479Z"
+    },
+    {
+      "id": "1c0381a2-8b98-477d-8fde-92c63e9e5347",
+      "chat_id": "39fe05b8-2e92-4235-a2a6-41f9b3a81c6e",
+      "role": "model",
+      "content": "Hello. How can I assist you today?",
+      "metadata": {},
+      "created_at": "2026-11-06T07:20:09.206Z"
+    },
+    {
+      "id": "a207dd7e-3f29-44e7-8942-d860850a679d",
+      "chat_id": "33049e5b-e331-46e7-93f6-6373c652f981",
+      "role": "user",
+      "content": "Make an animated website using HTML ,CSS , and Js",
+      "metadata": {},
+      "created_at": "2026-11-07T07:22:09.075Z"
+    },
+    {
+      "id": "56a7b422-c0a0-4907-b4ce-f435e962aea7",
+      "chat_id": "33049e5b-e331-46e7-93f6-6373c652f981",
+      "role": "model",
+      "content": "Here is a complete, single-file animated website built with modern HTML5, CSS3, and JavaScript. \n\nIt features a dynamic **interactive particle background**, **smooth scroll reveals**, a **tilt effect** on cards, and a **fully responsive layout** with a futuristic, clean aesthetic.\n\n### `index.html`\nSave this code as `index.html` and open it directly in any modern web browser.\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AURA // Next-Gen Experience</title>\n    <!-- Google Fonts -->\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap\" rel=\"stylesheet\">\n    \n    <style>\n        :root {\n            --bg-color: #050508;\n            --card-bg: rgba(255, 255, 255, 0.03);\n            --border-color: rgba(255, 255, 255, 0.08);\n            --accent: #6366f1;\n            --accent-glow: rgba(99, 102, 241, 0.3);\n            --text-primary: #f8fafc;\n            --text-secondary: #94a3b8;\n        }\n\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            background-color: var(--bg-color);\n            color: var(--text-primary);\n            font-family: 'Inter', sans-serif;\n            overflow-x: hidden;\n            scroll-behavior: smooth;\n        }\n\n        /* Canvas Background */\n        #particle-canvas {\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100vw;\n            height: 100vh;\n            pointer-events: none;\n            z-index: -1;\n        }\n\n        /* Navigation */\n        nav {\n            position: fixed;\n            top: 0;\n            width: 100%;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            padding: 1.5rem 5%;\n            backdrop-filter: blur(12px);\n            background: rgba(5, 5, 8, 0.7);\n            border-bottom: 1px solid var(--border-color);\n            z-index: 1000;\n        }\n\n        .logo {\n            font-family: 'Space Grotesk', sans-serif;\n            font-weight: 700;\n            font-size: 1.25rem;\n            letter-spacing: 2px;\n            color: var(--text-primary);\n            text-decoration: none;\n        }\n\n        .logo span {\n            color: var(--accent);\n        }\n\n        .nav-links {\n            display: flex;\n            gap: 2rem;\n            list-style: none;\n        }\n\n        .nav-links a {\n            color: var(--text-secondary);\n            text-decoration: none;\n            font-size: 0.9rem;\n            transition: color 0.3s ease;\n        }\n\n        .nav-links a:hover {\n            color: var(--text-primary);\n        }\n\n        /* Hero Section */\n        header {\n            height: 100vh;\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n            text-align: center;\n            padding: 0 1rem;\n            position: relative;\n        }\n\n        h1 {\n            font-family: 'Space Grotesk', sans-serif;\n            font-size: clamp(2.5rem, 6vw, 5rem);\n            font-weight: 700;\n            line-height: 1.1;\n            margin-bottom: 1.5rem;\n            max-width: 900px;\n            opacity: 0;\n            transform: translateY(30px);\n            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;\n        }\n\n        h1 span {\n            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n        }\n\n        p.hero-subtitle {\n            font-size: clamp(1rem, 2vw, 1.25rem);\n            color: var(--text-secondary);\n            max-width: 600px;\n            margin-bottom: 2.5rem;\n            opacity: 0;\n            transform: translateY(30px);\n            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s;\n        }\n\n        .cta-button {\n            display: inline-block;\n            padding: 0.85rem 2rem;\n            background: var(--accent);\n            color: white;\n            font-weight: 600;\n            border-radius: 50px;\n            text-decoration: none;\n            box-shadow: 0 0 30px var(--accent-glow);\n            transition: transform 0.3s ease, box-shadow 0.3s ease;\n            opacity: 0;\n            transform: translateY(30px);\n            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.7s;\n        }\n\n        .cta-button:hover {\n            transform: translateY(-3px) scale(1.02);\n            box-shadow: 0 0 40px var(--accent-glow);\n        }\n\n        /* Features Grid Section */\n        section {\n            padding: 8rem 10% 4rem 10%;\n        }\n\n        .section-title {\n            font-family: 'Space Grotesk', sans-serif;\n            font-size: 2rem;\n            margin-bottom: 3rem;\n            text-align: center;\n        }\n\n        .grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n            gap: 2rem;\n        }\n\n        .card {\n            background: var(--card-bg);\n            border: 1px solid var(--border-color);\n            border-radius: 16px;\n            padding: 2.5rem 2rem;\n            position: relative;\n            overflow: hidden;\n            transition: border-color 0.3s ease, transform 0.1s ease;\n            /* Scroll reveal initial states */\n            opacity: 0;\n            transform: translateY(40px);\n            transition: opacity 0.8s ease, transform 0.8s ease, border-color 0.3s ease;\n        }\n\n        .card.visible {\n            opacity: 1;\n            transform: translateY(0);\n        }\n\n        .card:hover {\n            border-color: rgba(99, 102, 241, 0.4);\n        }\n\n        .card h3 {\n            font-family: 'Space Grotesk', sans-serif;\n            font-size: 1.25rem;\n            margin-bottom: 1rem;\n        }\n\n        .card p {\n            color: var(--text-secondary);\n            font-size: 0.95rem;\n            line-height: 1.6;\n        }\n\n        /* Footer */\n        footer {\n            text-align: center;\n            padding: 4rem;\n            color: var(--text-secondary);\n            font-size: 0.85rem;\n            border-top: 1px solid var(--border-color);\n            margin-top: 4rem;\n        }\n\n        /* Keyframes */\n        @keyframes fadeInUp {\n            to {\n                opacity: 1;\n                transform: translateY(0);\n            }\n        }\n\n        /* Responsive Design */\n        @media (max-width: 768px) {\n            .nav-links {\n                display: none;\n            }\n            section {\n                padding: 5rem 5% 2rem 5%;\n            }\n        }\n    </style>\n</head>\n<body>\n\n    <!-- Dynamic Background Canvas -->\n    <canvas id=\"particle-canvas\"></canvas>\n\n    <!-- Navigation -->\n    <nav>\n        <a href=\"#\" class=\"logo\">AUR<span>A</span></a>\n        <ul class=\"nav-links\">\n            <li><a href=\"#features\">Features</a></li>\n            <li><a href=\"#about\">About</a></li>\n            <li><a href=\"#contact\">Contact</a></li>\n        </ul>\n    </nav>\n\n    <!-- Hero Section -->\n    <header>\n        <h1>Architecting the <br><span>Future of Code</span></h1>\n        <p class=\"hero-subtitle\">High-performance algorithms, fluid interfaces, and state-of-the-art software craftsmanship tailored for scale.</p>\n        <a href=\"#features\" class=\"cta-button\">Explore Ecosystem</a>\n    </header>\n\n    <!-- Features Section -->\n    <section id=\"features\">\n        <h2 class=\"section-title\">Core Capabilities</h2>\n        <div class=\"grid\">\n            <div class=\"card\">\n                <h3>Fluid Dynamics</h3>\n                <p>Engineered with performance-first paradigms to deliver seamless 60+ FPS interactions across devices.</p>\n            </div>\n            <div class=\"card\">\n                <h3>Cognitive Precision</h3>\n                <p>Optimized logical architectures designed to eliminate system friction and lower cognitive load.</p>\n            </div>\n            <div class=\"card\">\n                <h3>Infinite Scalability</h3>\n                <p>Modular frameworks built to expand effortlessly alongside your growing digital ecosystem.</p>\n            </div>\n        </div>\n    </section>\n\n    <!-- Footer -->\n    <footer>\n        <p>&copy; <span id=\"year\"></span> AURA Systems. All rights reserved.</p>\n    </footer>\n\n    <!-- JavaScript Animations & Interactions -->\n    <script>\n        // 1. Dynamic Particle Network Background\n        const canvas = document.getElementById('particle-canvas');\n        const ctx = canvas.getContext('2d');\n\n        let particlesArray;\n        let width = canvas.width = window.innerWidth;\n        let height = canvas.height = window.innerHeight;\n\n        window.addEventListener('resize', () => {\n            width = canvas.width = window.innerWidth;\n            height = canvas.height = window.innerHeight;\n            initParticles();\n        });\n\n        const mouse = {\n            x: null,\n            y: null,\n            radius: 120\n        };\n\n        window.addEventListener('mousemove', (e) => {\n            mouse.x = e.clientX;\n            mouse.y = e.clientY;\n        });\n\n        window.addEventListener('mouseout', () => {\n            mouse.x = null;\n            mouse.y = null;\n        });\n\n        class Particle {\n            constructor(x, y, dx, dy, size) {\n                this.x = x;\n                this.y = y;\n                this.dx = dx;\n                this.dy = dy;\n                this.size = size;\n            }\n\n            draw() {\n                ctx.beginPath();\n                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);\n                ctx.fillStyle = 'rgba(99, 102, 241, 0.4)';\n                ctx.fill();\n            }\n\n            update() {\n                if (this.x > width || this.x < 0) this.dx = -this.dx;\n                if (this.y > height || this.y < 0) this.dy = -this.dy;\n\n                this.x += this.dx;\n                this.y += this.dy;\n\n                // Mouse interactivity\n                let dx = mouse.x - this.x;\n                let dy = mouse.y - this.y;\n                let distance = Math.sqrt(dx * dx + dy * dy);\n                if (distance < mouse.radius) {\n                    const angle = Math.atan2(dy, dx);\n                    this.x -= Math.cos(angle) * 1.5;\n                    this.y -= Math.sin(angle) * 1.5;\n                }\n\n                this.draw();\n            }\n        }\n\n        function initParticles() {\n            particlesArray = [];\n            let numberOfParticles = (width * height) / 15000;\n            for (let i = 0; i < numberOfParticles; i++) {\n                let size = (Math.random() * 1.5) + 0.5;\n                let x = Math.random() * width;\n                let y = Math.random() * height;\n                let dx = (Math.random() - 0.5) * 0.5;\n                let dy = (Math.random() - 0.5) * 0.5;\n                particlesArray.push(new Particle(x, y, dx, dy, size));\n            }\n        }\n\n        function connectParticles() {\n            let opacityValue = 1;\n            for (let a = 0; a < particlesArray.length; a++) {\n                for (let b = a; b < particlesArray.length; b++) {\n                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) +\n                                 ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));\n                    if (distance < (width / 9) * (height / 9)) {\n                        opacityValue = 1 - (distance / 15000);\n                        ctx.strokeStyle = `rgba(99, 102, 241, ${opacityValue * 0.15})`;\n                        ctx.lineWidth = 1;\n                        ctx.beginPath();\n                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);\n                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);\n                        ctx.stroke();\n                    }\n                }\n            }\n        }\n\n        function animateParticles() {\n            ctx.clearRect(0, 0, width, height);\n            for (let i = 0; i < particlesArray.length; i++) {\n                particlesArray[i].update();\n            }\n            connectParticles();\n            requestAnimationFrame(animateParticles);\n        }\n\n        initParticles();\n        animateParticles();\n\n        // 2. Scroll Reveal Animations via Intersection Observer\n        const observerOptions = {\n            threshold: 0.15\n        };\n\n        const observer = new IntersectionObserver((entries, observer) => {\n            entries.forEach(entry => {\n                if (entry.isIntersecting) {\n                    entry.target.classList.add('visible');\n                    observer.unobserve(entry.target);\n                }\n            });\n        }, observerOptions);\n\n        document.querySelectorAll('.card').forEach(card => {\n            observer.observe(card);\n        });\n\n        // 3. Dynamic Footer Year\n        document.getElementById('year').textContent = new Date().getFullYear();\n    </script>\n</body>\n</html>\n```\n\n### Key Technical Features:\n1. **HTML5 Canvas Particle Field**: Generates responsive, mathematical connection lines that dynamically react when the user moves their mouse cursor.\n2. **Keyframe Entry Sequence**: Uses cubic-bezier easing to gracefully animate typography and structural elements on load.\n3. **Scroll Reveal Architecture**: Uses the native `IntersectionObserver` API to lazily animate content cards into layout view as the user scrolls down the page.\n4. **Performance First**: Zero bloated JavaScript frameworks; written entirely in vanilla ES6+ with maximum frame-rate efficiency in mind.",
+      "metadata": {},
+      "created_at": "2026-11-07T07:22:31.562Z"
+    }
+  ]
+}
