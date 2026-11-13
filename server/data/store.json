@@ -1,6 +1,15 @@
 {
   "chats": [
     {
+      "id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "user_id": null,
+      "title": "Simple greeting and introduction",
+      "model": "gemini-3.8-flash",
+      "pinned": false,
+      "created_at": "2026-11-08T17:41:01.961Z",
+      "updated_at": "2026-11-13T13:32:25.452Z"
+    },
+    {
       "id": "33049e5b-e331-46e7-93f6-6373c652f981",
       "user_id": null,
       "title": "Simple HTML Code Example",
@@ -26,15 +35,6 @@
       "pinned": false,
       "created_at": "2026-11-06T07:10:27.387Z",
       "updated_at": "2026-11-06T07:20:09.206Z"
-    },
-    {
-      "id": "b55e4a13-0972-496d-ad8b-799db891af22",
-      "user_id": null,
-      "title": "New Conversation",
-      "model": "aura-3.8-flash",
-      "pinned": false,
-      "created_at": "2026-11-06T07:05:48.447Z",
-      "updated_at": "2026-11-06T07:05:48.449Z"
     },
     {
       "id": "60e3098f-fb07-456f-ab94-0d8ad459bc93",
@@ -79,14 +79,6 @@
       "content": "Design an event-driven architecture using Kafka, Redis, and PostgreSQL for handling 50,000 orders/sec with idempotent guarantees.",
       "metadata": {},
       "created_at": "2026-11-05T18:26:32.282Z"
-    },
-    {
-      "id": "3078b16d-6aea-4aa3-a39d-0e3a59ca0ca0",
-      "chat_id": "b55e4a13-0972-496d-ad8b-799db891af22",
-      "role": "user",
-      "content": "Give a 1-sentence greeting for the AURA platform.",
-      "metadata": {},
-      "created_at": "2026-11-06T07:05:48.449Z"
     },
     {
       "id": "3247e077-b71a-4be6-9690-c0fe00463f21",
@@ -167,6 +159,70 @@
       "content": "Here is a complete, single-file animated website built with modern HTML5, CSS3, and JavaScript. \n\nIt features a dynamic **interactive particle background**, **smooth scroll reveals**, a **tilt effect** on cards, and a **fully responsive layout** with a futuristic, clean aesthetic.\n\n### `index.html`\nSave this code as `index.html` and open it directly in any modern web browser.\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AURA // Next-Gen Experience</title>\n    <!-- Google Fonts -->\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap\" rel=\"stylesheet\">\n    \n    <style>\n        :root {\n            --bg-color: #050508;\n            --card-bg: rgba(255, 255, 255, 0.03);\n            --border-color: rgba(255, 255, 255, 0.08);\n            --accent: #6366f1;\n            --accent-glow: rgba(99, 102, 241, 0.3);\n            --text-primary: #f8fafc;\n            --text-secondary: #94a3b8;\n        }\n\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            background-color: var(--bg-color);\n            color: var(--text-primary);\n            font-family: 'Inter', sans-serif;\n            overflow-x: hidden;\n            scroll-behavior: smooth;\n        }\n\n        /* Canvas Background */\n        #particle-canvas {\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100vw;\n            height: 100vh;\n            pointer-events: none;\n            z-index: -1;\n        }\n\n        /* Navigation */\n        nav {\n            position: fixed;\n            top: 0;\n            width: 100%;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            padding: 1.5rem 5%;\n            backdrop-filter: blur(12px);\n            background: rgba(5, 5, 8, 0.7);\n            border-bottom: 1px solid var(--border-color);\n            z-index: 1000;\n        }\n\n        .logo {\n            font-family: 'Space Grotesk', sans-serif;\n            font-weight: 700;\n            font-size: 1.25rem;\n            letter-spacing: 2px;\n            color: var(--text-primary);\n            text-decoration: none;\n        }\n\n        .logo span {\n            color: var(--accent);\n        }\n\n        .nav-links {\n            display: flex;\n            gap: 2rem;\n            list-style: none;\n        }\n\n        .nav-links a {\n            color: var(--text-secondary);\n            text-decoration: none;\n            font-size: 0.9rem;\n            transition: color 0.3s ease;\n        }\n\n        .nav-links a:hover {\n            color: var(--text-primary);\n        }\n\n        /* Hero Section */\n        header {\n            height: 100vh;\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n            text-align: center;\n            padding: 0 1rem;\n            position: relative;\n        }\n\n        h1 {\n            font-family: 'Space Grotesk', sans-serif;\n            font-size: clamp(2.5rem, 6vw, 5rem);\n            font-weight: 700;\n            line-height: 1.1;\n            margin-bottom: 1.5rem;\n            max-width: 900px;\n            opacity: 0;\n            transform: translateY(30px);\n            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;\n        }\n\n        h1 span {\n            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n        }\n\n        p.hero-subtitle {\n            font-size: clamp(1rem, 2vw, 1.25rem);\n            color: var(--text-secondary);\n            max-width: 600px;\n            margin-bottom: 2.5rem;\n            opacity: 0;\n            transform: translateY(30px);\n            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s;\n        }\n\n        .cta-button {\n            display: inline-block;\n            padding: 0.85rem 2rem;\n            background: var(--accent);\n            color: white;\n            font-weight: 600;\n            border-radius: 50px;\n            text-decoration: none;\n            box-shadow: 0 0 30px var(--accent-glow);\n            transition: transform 0.3s ease, box-shadow 0.3s ease;\n            opacity: 0;\n            transform: translateY(30px);\n            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.7s;\n        }\n\n        .cta-button:hover {\n            transform: translateY(-3px) scale(1.02);\n            box-shadow: 0 0 40px var(--accent-glow);\n        }\n\n        /* Features Grid Section */\n        section {\n            padding: 8rem 10% 4rem 10%;\n        }\n\n        .section-title {\n            font-family: 'Space Grotesk', sans-serif;\n            font-size: 2rem;\n            margin-bottom: 3rem;\n            text-align: center;\n        }\n\n        .grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n            gap: 2rem;\n        }\n\n        .card {\n            background: var(--card-bg);\n            border: 1px solid var(--border-color);\n            border-radius: 16px;\n            padding: 2.5rem 2rem;\n            position: relative;\n            overflow: hidden;\n            transition: border-color 0.3s ease, transform 0.1s ease;\n            /* Scroll reveal initial states */\n            opacity: 0;\n            transform: translateY(40px);\n            transition: opacity 0.8s ease, transform 0.8s ease, border-color 0.3s ease;\n        }\n\n        .card.visible {\n            opacity: 1;\n            transform: translateY(0);\n        }\n\n        .card:hover {\n            border-color: rgba(99, 102, 241, 0.4);\n        }\n\n        .card h3 {\n            font-family: 'Space Grotesk', sans-serif;\n            font-size: 1.25rem;\n            margin-bottom: 1rem;\n        }\n\n        .card p {\n            color: var(--text-secondary);\n            font-size: 0.95rem;\n            line-height: 1.6;\n        }\n\n        /* Footer */\n        footer {\n            text-align: center;\n            padding: 4rem;\n            color: var(--text-secondary);\n            font-size: 0.85rem;\n            border-top: 1px solid var(--border-color);\n            margin-top: 4rem;\n        }\n\n        /* Keyframes */\n        @keyframes fadeInUp {\n            to {\n                opacity: 1;\n                transform: translateY(0);\n            }\n        }\n\n        /* Responsive Design */\n        @media (max-width: 768px) {\n            .nav-links {\n                display: none;\n            }\n            section {\n                padding: 5rem 5% 2rem 5%;\n            }\n        }\n    </style>\n</head>\n<body>\n\n    <!-- Dynamic Background Canvas -->\n    <canvas id=\"particle-canvas\"></canvas>\n\n    <!-- Navigation -->\n    <nav>\n        <a href=\"#\" class=\"logo\">AUR<span>A</span></a>\n        <ul class=\"nav-links\">\n            <li><a href=\"#features\">Features</a></li>\n            <li><a href=\"#about\">About</a></li>\n            <li><a href=\"#contact\">Contact</a></li>\n        </ul>\n    </nav>\n\n    <!-- Hero Section -->\n    <header>\n        <h1>Architecting the <br><span>Future of Code</span></h1>\n        <p class=\"hero-subtitle\">High-performance algorithms, fluid interfaces, and state-of-the-art software craftsmanship tailored for scale.</p>\n        <a href=\"#features\" class=\"cta-button\">Explore Ecosystem</a>\n    </header>\n\n    <!-- Features Section -->\n    <section id=\"features\">\n        <h2 class=\"section-title\">Core Capabilities</h2>\n        <div class=\"grid\">\n            <div class=\"card\">\n                <h3>Fluid Dynamics</h3>\n                <p>Engineered with performance-first paradigms to deliver seamless 60+ FPS interactions across devices.</p>\n            </div>\n            <div class=\"card\">\n                <h3>Cognitive Precision</h3>\n                <p>Optimized logical architectures designed to eliminate system friction and lower cognitive load.</p>\n            </div>\n            <div class=\"card\">\n                <h3>Infinite Scalability</h3>\n                <p>Modular frameworks built to expand effortlessly alongside your growing digital ecosystem.</p>\n            </div>\n        </div>\n    </section>\n\n    <!-- Footer -->\n    <footer>\n        <p>&copy; <span id=\"year\"></span> AURA Systems. All rights reserved.</p>\n    </footer>\n\n    <!-- JavaScript Animations & Interactions -->\n    <script>\n        // 1. Dynamic Particle Network Background\n        const canvas = document.getElementById('particle-canvas');\n        const ctx = canvas.getContext('2d');\n\n        let particlesArray;\n        let width = canvas.width = window.innerWidth;\n        let height = canvas.height = window.innerHeight;\n\n        window.addEventListener('resize', () => {\n            width = canvas.width = window.innerWidth;\n            height = canvas.height = window.innerHeight;\n            initParticles();\n        });\n\n        const mouse = {\n            x: null,\n            y: null,\n            radius: 120\n        };\n\n        window.addEventListener('mousemove', (e) => {\n            mouse.x = e.clientX;\n            mouse.y = e.clientY;\n        });\n\n        window.addEventListener('mouseout', () => {\n            mouse.x = null;\n            mouse.y = null;\n        });\n\n        class Particle {\n            constructor(x, y, dx, dy, size) {\n                this.x = x;\n                this.y = y;\n                this.dx = dx;\n                this.dy = dy;\n                this.size = size;\n            }\n\n            draw() {\n                ctx.beginPath();\n                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);\n                ctx.fillStyle = 'rgba(99, 102, 241, 0.4)';\n                ctx.fill();\n            }\n\n            update() {\n                if (this.x > width || this.x < 0) this.dx = -this.dx;\n                if (this.y > height || this.y < 0) this.dy = -this.dy;\n\n                this.x += this.dx;\n                this.y += this.dy;\n\n                // Mouse interactivity\n                let dx = mouse.x - this.x;\n                let dy = mouse.y - this.y;\n                let distance = Math.sqrt(dx * dx + dy * dy);\n                if (distance < mouse.radius) {\n                    const angle = Math.atan2(dy, dx);\n                    this.x -= Math.cos(angle) * 1.5;\n                    this.y -= Math.sin(angle) * 1.5;\n                }\n\n                this.draw();\n            }\n        }\n\n        function initParticles() {\n            particlesArray = [];\n            let numberOfParticles = (width * height) / 15000;\n            for (let i = 0; i < numberOfParticles; i++) {\n                let size = (Math.random() * 1.5) + 0.5;\n                let x = Math.random() * width;\n                let y = Math.random() * height;\n                let dx = (Math.random() - 0.5) * 0.5;\n                let dy = (Math.random() - 0.5) * 0.5;\n                particlesArray.push(new Particle(x, y, dx, dy, size));\n            }\n        }\n\n        function connectParticles() {\n            let opacityValue = 1;\n            for (let a = 0; a < particlesArray.length; a++) {\n                for (let b = a; b < particlesArray.length; b++) {\n                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) +\n                                 ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));\n                    if (distance < (width / 9) * (height / 9)) {\n                        opacityValue = 1 - (distance / 15000);\n                        ctx.strokeStyle = `rgba(99, 102, 241, ${opacityValue * 0.15})`;\n                        ctx.lineWidth = 1;\n                        ctx.beginPath();\n                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);\n                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);\n                        ctx.stroke();\n                    }\n                }\n            }\n        }\n\n        function animateParticles() {\n            ctx.clearRect(0, 0, width, height);\n            for (let i = 0; i < particlesArray.length; i++) {\n                particlesArray[i].update();\n            }\n            connectParticles();\n            requestAnimationFrame(animateParticles);\n        }\n\n        initParticles();\n        animateParticles();\n\n        // 2. Scroll Reveal Animations via Intersection Observer\n        const observerOptions = {\n            threshold: 0.15\n        };\n\n        const observer = new IntersectionObserver((entries, observer) => {\n            entries.forEach(entry => {\n                if (entry.isIntersecting) {\n                    entry.target.classList.add('visible');\n                    observer.unobserve(entry.target);\n                }\n            });\n        }, observerOptions);\n\n        document.querySelectorAll('.card').forEach(card => {\n            observer.observe(card);\n        });\n\n        // 3. Dynamic Footer Year\n        document.getElementById('year').textContent = new Date().getFullYear();\n    </script>\n</body>\n</html>\n```\n\n### Key Technical Features:\n1. **HTML5 Canvas Particle Field**: Generates responsive, mathematical connection lines that dynamically react when the user moves their mouse cursor.\n2. **Keyframe Entry Sequence**: Uses cubic-bezier easing to gracefully animate typography and structural elements on load.\n3. **Scroll Reveal Architecture**: Uses the native `IntersectionObserver` API to lazily animate content cards into layout view as the user scrolls down the page.\n4. **Performance First**: Zero bloated JavaScript frameworks; written entirely in vanilla ES6+ with maximum frame-rate efficiency in mind.",
       "metadata": {},
       "created_at": "2026-11-07T07:22:31.562Z"
+    },
+    {
+      "id": "70ffa457-28fe-47d9-87a6-68af2b323744",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "user",
+      "content": "Tell me some dark rules about North korea",
+      "metadata": {},
+      "created_at": "2026-11-08T17:41:32.750Z"
+    },
+    {
+      "id": "77196491-24db-46f1-be76-04e474409474",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "user",
+      "content": "hlo",
+      "metadata": {},
+      "created_at": "2026-11-08T17:43:21.455Z"
+    },
+    {
+      "id": "49c4f8dc-2161-4300-bb75-072364d0ad60",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "user",
+      "content": "hlo",
+      "metadata": {},
+      "created_at": "2026-11-13T13:27:16.260Z"
+    },
+    {
+      "id": "39caaf2c-3f6e-48d6-80de-abec41eb657f",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "user",
+      "content": "hlo",
+      "metadata": {},
+      "created_at": "2026-11-13T13:31:23.174Z"
+    },
+    {
+      "id": "6885bc3c-f4e9-4ff5-90b0-6a4edb5b2ad4",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "user",
+      "content": "hlo",
+      "metadata": {},
+      "created_at": "2026-11-13T13:32:05.429Z"
+    },
+    {
+      "id": "ab71adc3-b1a4-4c5f-a840-2656b62abae7",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "model",
+      "content": "Operating as AURA, your elite AI cognitive partner. \n\nThe Democratic People's Republic of Korea (DPRK) operates under some of the most extreme totalitarian controls in modern history. Below is a breakdown of the systemic mechanisms and dark realities that define life within the regime, categorized for clarity and analytical precision.\n\n---\n\n### 1. The Three-Generation Punishment Law (*Sujong Yonjwa*)\nUnder the principle of collective guilt, if an individual is sent to a political prison camp (*kwanliso*), their immediate family—including parents, children, and siblings—are imprisoned with them. \n* **The Mechanism:** This ensures that \"traitors' seed\" is entirely eradicated. \n* **Generational Trap:** Children born inside these camps inherit the prisoner status, living and dying within the camp system without ever knowing the outside world.\n\n### 2. Strict Information Quarantine\nNorth Korea is one of the most isolated information environments globally. Access to outside media, the global internet, and unmonitored telecommunications is a capital offense.\n* **The Law on Eliminating Reactionary Thought and Culture (2020):** Imposes up to 15 years in labor camps for watching foreign media (particularly South Korean dramas, known as *Hallyu*). Distributing foreign media can result in the death penalty.\n* **Device Sanitization:** Smartphones (running a heavily modified, state-controlled OS called *Red Star*) automatically take screenshots of the user's activity at random intervals, and inspection squads (*Pyolsang*) perform spot-checks on devices to delete unauthorized foreign content.\n\n### 3. The Songbun Caste System\nSociety is rigidly stratified into a socio-political class system called *Songbun* (成分), established in the late 1950s. It divides the population into three main tiers based on perceived loyalty to the Kim regime:\n* **The Core Class:** Party elites, descendants of anti-Japanese fighters, and war heroes. They receive the best housing, education, and food rations.\n* **The Wavering Class:** Ordinary workers, technicians, and minor merchants.\n* **The Hostile Class:** Descendants of political prisoners, landowners, Christians, and individuals with family ties to South Korea. They are relegated to hazardous labor, remote regions, and systemic deprivation.\n* **Impact:** *Songbun* dictates employment, medical care, marriage approval, and residential rights.\n\n### 4. State-Sanctioned Forced Labor and the *Juche* Economy\nThe state maintains control over the population through mandatory labor quotas and the extraction of unpaid work.\n* **Shock Brigades (*Sokdoljon*):** Millions of citizens, including children and students, are regularly mobilized for intensive infrastructure projects without pay.\n* **Overseas Labor Export:** The regime sends tens of thousands of workers abroad (predominantly to Russia and China) to work in logging, construction, and manufacturing. These workers have their passports confiscated, live in heavily monitored barracks, and up to 90% of their wages are confiscated directly by the regime to fund its weapons programs.\n\n### 5. Institutionalized Public Executions\nPublic executions serve as a tool of psychological deterrence and state control.\n* **Offenses:** Commonly carried out for smuggling, watching banned media, unauthorized religious practice, or attempts to defect.\n* **Execution Methods:** While firing squads are standard, historical and intelligence reports indicate the occasional use of heavy weaponry (such as anti-aircraft guns) for high-profile targets to maximize psychological impact. Attendance at these executions by local communities, including schools, is frequently mandatory.\n\n### 6. The Total Control Camps (*Kwanliso*)\nUnlike correctional labor camps (*kyohwaso*), which are designed for common criminals and temporary sentences, the *kwanliso* are sprawling, secretive gulags operated by the State Security Department.\n* **Conditions:** Inmates face systematic starvation, torture, medical experimentation, and forced labor in mines and logging camps. \n* **Mortality Rates:** High rates of death from malnutrition, hypothermia, and workplace accidents are standard; the population is kept intentionally suppressed to prevent uprisings.",
+      "metadata": {},
+      "created_at": "2026-11-13T13:32:10.205Z"
+    },
+    {
+      "id": "d41f6179-b337-487d-b5cc-162f88a3c0cc",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "user",
+      "content": "hi",
+      "metadata": {},
+      "created_at": "2026-11-13T13:32:24.397Z"
+    },
+    {
+      "id": "9de6b4e0-2506-49dd-9e71-b581273430fe",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "model",
+      "content": "Hello. I am AURA. How may I assist you with software architecture, advanced analytics, or technical problem-solving today?",
+      "metadata": {},
+      "created_at": "2026-11-13T13:32:25.452Z"
     }
   ]
 }

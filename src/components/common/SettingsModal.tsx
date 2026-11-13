@@ -20,10 +20,32 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
   } = useChat();
 
   const [activeTab, setActiveTab] = useState<'model' | 'persona' | 'database'>('model');
-  const [instruction, setInstruction] = useState(settings.systemInstruction);
-  const [temperature, setTemperature] = useState(settings.temperature);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const [savedToast, setSavedToast] = useState(false);
+  const [newApiKey, setNewApiKey] = useState('');
+  const [keySaving, setKeySaving] = useState(false);
+  const [keySuccess, setKeySuccess] = useState(false);
+  const [showKey, setShowKey] = useState(false);
+
+  const handleUpdateApiKey = async () => {
+    if (!newApiKey.trim()) return;
+    setKeySaving(true);
+    try {
+      const res = await fetch('/api/config/key', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ apiKey: newApiKey.trim() }),
+      });
+      if (res.ok) {
+        setKeySuccess(true);
+        setNewApiKey('');
+        await refreshHealth();
+        setTimeout(() => setKeySuccess(false), 3000);
+      }
+    } catch (e) {
+      console.error('Failed to update key:', e);
+    } finally {
+      setKeySaving(false);
+    }
+  };
 
   const handleSave = () => {
     updateSettings({
@@ -294,11 +316,11 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
                   </div>
 
                   {/* Neural Engine Key status */}
-                  <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                  <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-3">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-xs font-semibold font-mono uppercase text-zinc-400">
                         <Key className="w-3.5 h-3.5" />
-                        <span>AURA Neural Engine</span>
+                        <span>AURA Neural Engine Key</span>
                       </div>
                       <span
                         className={`text-[11px] px-2 py-0.5 rounded font-mono ${
@@ -307,16 +329,52 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
                             : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
                         }`}
                       >
-                        {systemHealth?.engineConfigured ? 'Configured' : 'Missing Key'}
+                        {systemHealth?.engineConfigured ? 'Active & Ready' : 'Key Needed'}
                       </span>
                     </div>
 
                     <p className="text-xs text-zinc-400 leading-relaxed">
-                      API credentials are held strictly inside the server environment and are never leaked to client bundles. To update credentials, edit <code className="text-zinc-200 bg-white/10 px-1 py-0.5 rounded">.env</code>:
+                      Enter your Google Gemini API key below. Valid keys start with <code className="text-emerald-300 font-mono bg-white/5 px-1 py-0.5 rounded">AIzaSy...</code>:
                     </p>
-                    <pre className="p-2.5 rounded-lg bg-black/50 border border-white/10 text-xs text-zinc-300 font-mono overflow-x-auto">
-                      AURA_API_KEY=your_key_here
-                    </pre>
+
+                    <div className="flex items-center gap-2">
+                      <div className="relative flex-1">
+                        <input
+                          type={showKey ? 'text' : 'password'}
+                          value={newApiKey}
+                          onChange={(e) => setNewApiKey(e.target.value)}
+                          placeholder="Paste AIzaSy... key here"
+                          className="w-full px-3 py-2 pr-12 rounded-xl bg-black/50 border border-white/10 text-xs text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-white/30 font-mono"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowKey(!showKey)}
+                          className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-zinc-500 hover:text-zinc-300"
+                        >
+                          {showKey ? 'Hide' : 'Show'}
+                        </button>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={handleUpdateApiKey}
+                        disabled={!newApiKey.trim() || keySaving}
+                        className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${
+                          newApiKey.trim()
+                            ? 'bg-white text-black hover:bg-zinc-200 active:scale-95'
+                            : 'bg-white/5 text-zinc-600 cursor-not-allowed'
+                        }`}
+                      >
+                        {keySaving ? 'Saving...' : 'Save Key'}
+                      </button>
+                    </div>
+
+                    {keySuccess && (
+                      <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
+                        <Check className="w-3.5 h-3.5" />
+                        <span>API key updated in .env and loaded successfully!</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}

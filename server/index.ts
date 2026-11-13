@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { db } from './db.js';
 import { streamChatResponse, generateChatTitle, SUPPORTED_MODELS, getEngineClient } from './gemini.js';
@@ -38,6 +39,39 @@ app.get('/api/models', (req, res) => {
     models: SUPPORTED_MODELS,
     defaultModel: 'aura-3.8-flash',
   });
+});
+
+// Update API key dynamically
+app.post('/api/config/key', (req, res) => {
+  const { apiKey } = req.body;
+  if (!apiKey || typeof apiKey !== 'string') {
+    return res.status(400).json({ error: 'API key is required' });
+  }
+
+  const cleanKey = apiKey.trim();
+  process.env.AURA_API_KEY = cleanKey;
+  process.env.GEMINI_API_KEY = cleanKey;
+
+  try {
+    const envPath = path.join(__dirname, '../.env');
+    let envContent = fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf-8') : '';
+    if (envContent.includes('AURA_API_KEY=')) {
+      envContent = envContent.replace(/AURA_API_KEY=.*/g, `AURA_API_KEY=${cleanKey}`);
+    } else {
+      envContent += `\nAURA_API_KEY=${cleanKey}`;
+    }
+    if (envContent.includes('GEMINI_API_KEY=')) {
+      envContent = envContent.replace(/GEMINI_API_KEY=.*/g, `GEMINI_API_KEY=${cleanKey}`);
+    } else {
+      envContent += `\nGEMINI_API_KEY=${cleanKey}`;
+    }
+    fs.writeFileSync(envPath, envContent, 'utf-8');
+    console.log('[AURA Server] API key updated in .env successfully.');
+  } catch (err) {
+    console.warn('[AURA Server] Could not update .env file:', err);
+  }
+
+  res.json({ success: true, message: 'API key updated successfully' });
 });
 
 // 3. List all conversations

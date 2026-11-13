@@ -124,8 +124,9 @@ export async function* streamChatResponse({
   } catch (error: any) {
     console.error('[Engine Stream Error]:', error);
     let friendlyMessage = error?.message || 'Error processing neural inference stream';
-    if (friendlyMessage.includes('API key not valid') || friendlyMessage.includes('invalid api key')) {
-      friendlyMessage = 'The backend engine key is invalid. Please verify your API key in your .env configuration.';
+    const errorStr = (error?.message || '') + JSON.stringify(error);
+    if (errorStr.includes('ACCESS_TOKEN_TYPE_UNSUPPORTED') || errorStr.includes('API key not valid') || errorStr.includes('invalid api key') || error?.status === 401) {
+      friendlyMessage = 'Invalid API key. Your Gemini API key must start with "AIzaSy..." (obtained from https://aistudio.google.com/apikey). The current key in .env starts with "AQ." which is not a supported API key format.';
     } else if (friendlyMessage.includes('ResourceExhausted') || friendlyMessage.includes('429')) {
       friendlyMessage = 'Engine rate limit reached. Please wait a moment before sending another request.';
     }
