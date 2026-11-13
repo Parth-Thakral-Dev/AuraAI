@@ -7,7 +7,7 @@
       "model": "gemini-3.8-flash",
       "pinned": false,
       "created_at": "2026-11-08T17:41:01.961Z",
-      "updated_at": "2026-11-13T13:32:25.452Z"
+      "updated_at": "2026-11-13T13:43:06.676Z"
     },
     {
       "id": "33049e5b-e331-46e7-93f6-6373c652f981",
@@ -223,6 +223,22 @@
       "content": "Hello. I am AURA. How may I assist you with software architecture, advanced analytics, or technical problem-solving today?",
       "metadata": {},
       "created_at": "2026-11-13T13:32:25.452Z"
+    },
+    {
+      "id": "8ba63200-185b-4c30-9125-b78c858b96fa",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "user",
+      "content": "hi",
+      "metadata": {},
+      "created_at": "2026-11-13T13:43:05.329Z"
+    },
+    {
+      "id": "6e80225e-bae8-4c8e-b1bb-b796e1bab550",
+      "chat_id": "83fea14f-4150-4a81-b007-b8fc5f3d1b68",
+      "role": "model",
+      "content": "Hello. How can I assist you today?",
+      "metadata": {},
+      "created_at": "2026-11-13T13:43:06.676Z"
     }
   ]
 }
